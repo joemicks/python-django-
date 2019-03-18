@@ -1,0 +1,51 @@
+
+
+{% block content %}
+{% load static %}
+<link href="{% static 'account/css/log.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+{% if username is None %}
+        <form role="form" method="post">
+            {% csrf_token %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4" style="background-color:#632A76">
+            <h1 class="text-center login-title" style="color:white;border-radius:8px;">LOGIN</h1>
+            <div class="account-wall" style="background-color:orange">
+                <img class="profile-img" src="{% static 'account/images/profile.png' %}"
+                    alt="">
+                <center>
+
+              <div>
+
+    <label for="username" >Username</label>
+    <input type="text" name="username" placeholder="Username" id="username" required></br></br>
+    </div>
+    <div><label for="password">Password</label>
+   <input type="password" id = "pwd" name="password" class="textInput" placeholder="Password" id="password" required>
+</div></br></br>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button>
+
+                     </button>
+                <label class="checkbox pull-left">
+                   &nbsp; <input type="checkbox" value="remember-me">
+                      Remember me
+                </label>
+                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                </center>
+                {% else %}
+        <h3>Welcome !!! {{ username }}</h3>
+        <a style="color:green;" href = "{% url 'demos-sessions' %}?action=logout">LogOut</a>
+
+
+    {% endif %}
+{% endblock %}
+                </div>
+            <a href='register_savefile_retreive' class="text-center new-account" style="color:white">Create an account </a>
+        </div>
+    </div>
+</div>
+</form>

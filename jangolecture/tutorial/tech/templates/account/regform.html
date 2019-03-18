@@ -1,0 +1,75 @@
+{% block content %}
+{% load static %}
+
+<center>
+{% load static %}
+<link href="{% static 'account/css/log.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4" style="background-color:#632A76">
+            <h1 class="text-center login-title" style="color:white;border-radius:8px;">Create Account</h1>
+            <div class="account-wall" style="background-color:orange">
+                <img class="profile-img" src="{% static 'account/images/profile.png' %}"
+                    alt="">
+<center>
+
+    <form method="post" action="/savefirst/" name="vform" onsubmit="return validate()">
+        {% csrf_token %}
+
+
+<div>
+<div>
+    <label for="username" >Username</label>
+    <input type="text" name="username" placeholder="Username" id="username" required></br></br>
+    </div>
+    <div><label for="password">Password</label>
+   <input type="password" id = "pwd" name="password" class="textInput" placeholder="Password" id="password" pattern=".{8,12}" required title="8 to 12 characters" required>
+</div></br></br>
+    <div style="padding-right:55px">
+    <label for="retype">Confirm Password</label>
+  <input type="password" id= "pwd2"  name="retype" class="textInput" id="retype" placeholder="Retype-Password"  pattern=".{8,12}" required title="8 to 12 characters" onchange="validate(document.getElementById('pwd').value,this.value);"required>
+</div></br></br>
+
+
+    <div style="padding-right:55px"><label for="country">UserType</label>
+
+     <select name="usertype" id="country" style="border-radius:8px">
+        {% for singleData in myData %}
+        <option value = {{ singleData.value }}>
+            {{ singleData.type }}
+        </option>
+            {% endfor %}
+
+    </select></div></br></br>
+ <div style="padding-left:30px"> <label for="phone">Contact</label>
+    <input type="text" name="contact" id="phone" pattern="[7-9]{1}[0-9]{9}" title="Phone number  with 0-9" placeholder="phone" required>
+</div></div> </br></br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    </form>
+
+</center>
+
+                  </button>
+
+               <span class="clearfix"></span>
+                </form>
+            </div>
+            <a href='register_savefile_retreive' class="text-center new-account" style="color:white"> </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="padding:10px">
+
+
+    </div></center>
+<script src="{% static 'account/js/password.js' %}"></script>
+{% endblock %}
+
+
+
+

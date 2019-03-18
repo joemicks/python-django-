@@ -1,0 +1,293 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+
+{% load static %}
+<html>
+<head>
+<title>Shoppy an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link href="{% static 'account/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+<!-- Custom Theme files -->
+<link href="{% static 'account/css/style.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<!--js-->
+<script src="{% static 'account/js/jquery-2.1.1.min.js' %}"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!--icons-css-->
+<link href="{% static 'account/css/font-awesome.css' %}" rel="stylesheet">
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Work+Sans:400,500,600' rel='stylesheet' type='text/css'>
+<!--static chart-->
+<script src="{% static 'account/js/Chart.min.js' %}"></script>
+<!--//charts-->
+<!-- geo chart -->
+    <script src="//cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <script>window.modernizr || document.write('<script src="lib/modernizr/modernizr-custom.js"><\/script>')</script>
+    <!--<script src="lib/html5shiv/html5shiv.js"></script>-->
+     <!-- Chartinator  -->
+    <script src="{% static 'account/js/chartinator.js' %}" ></script>
+
+<!--geo chart-->
+
+<!--skycons-icons-->
+<script src="{% static 'account/js/skycons.js' %}"></script>
+<!--//skycons-icons-->
+</head>
+<body background="red">
+<div class="page-container">
+   <div class="left-content">
+	   <div class="mother-grid-inner">
+            <!--header start here-->
+				<div class="header-main"  style="background-color:#280E3B">
+					<div class="header-left">
+
+                        <h1 style="color:white;display:inline-block; font-family: myFirstFont;bold:10px;">DMS</h1>
+
+							<div class="clearfix"> </div>
+						 </div>
+						 <div class="header-right">
+							<div class="profile_details_left"><!--notifications of menu start -->
+								<ul class="nofitications-dropdown">
+
+
+								</ul>
+								<div class="clearfix"> </div>
+							</div>
+							<!--notification menu end -->
+							<div class="profile_details">
+								<ul>
+									<li class="dropdown profile_details_drop">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+											<div class="profile_img">
+												<span class="prfil-img"><img src="images/p1.png" alt=""> </span>
+												<div class="user-name">
+													{%  if  request.session.username == request.session.session_key %}
+ 								<a href="demos/sessions/" name="upload" class="btn btn-primary" value="Upload">Login</a>
+
+
+{% else %}
+ <a href="demos/sessions/" name="upload" class="btn btn-primary" value="Upload" hidden>
+ Login</a>
+
+{% endif %}
+
+
+
+
+
+													   </div>
+												</div>
+
+												<div class="clearfix"></div>
+											</div>
+										</a>
+
+									</li>
+								</ul>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+				     <div class="clearfix"> </div>
+				</div>
+<!--heder end here-->
+<!-- script-for sticky-nav -->
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-main").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop();
+				if(scrollpos >=navoffeset){
+					$(".header-main").addClass("fixed");
+				}else{
+					$(".header-main").removeClass("fixed");
+				}
+			 });
+
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+<!--inner block start here-->
+<div class="inner-block">
+<!--market updates updates-->
+	 <div class="market-updates">
+			<div class="col-md-4 market-update-gd">
+
+
+				  <div class="clearfix"> </div>
+
+			</div>
+
+
+
+				  <div class="clearfix"> </div>
+
+			</div>
+			<div class="col-md-4 market-update-gd">
+
+					<div class="col-md-4 market-update-right">
+
+				  <div class="clearfix"> </div>
+
+			</div>
+		   <div class="clearfix"> </div>
+		</div>
+<!--market updates end here-->
+<!--mainpage chit-chating-->
+
+<!--main page chit chating end here-->
+<!--main page chart start here-->
+<div class="main-page-charts">
+   <div class="main-page-chart-layer1">
+
+	 <div class="clearfix"> </div>
+  </div>
+ </div>
+<!--main page chart layer2-->
+<div class="chart-layer-2">
+
+	<div class="col-md-6 chart-layer2-left" style="padding-left:890px;display:inline-block">
+
+
+  <div class="clearfix">
+	</div> </div>
+</div>
+
+<!--climate start here-->
+
+<div class="climate" >
+	<div class="col-md-4 climate-grids" >
+		<div class="climate-grid1">
+			<div class="climate-gd1-top">
+<h1>Donates  </h1>
+                <img src="{% static 'account/images/donations.jpg' %}" height="150" width="200" style="border-radius:8px">
+				<div class="col-md-6 climate-gd1top-right">
+				</div>
+
+				<div class="clearfix" style="height:25px"> </div></br>
+
+			<p>A donor in general is a person, organization or government which donates something voluntarily. The term is usually used to represent a form of pure altruism, but is sometimes used when the payment for a service is recognized by all parties as representing less than the value of the donation and that the motivation is altruistic. In business law a donor is someone who is giving the gift (law), and a donee the person receiving the gift.
+
+				More broadly</p>
+            </div>
+
+
+
+			<div class="climate-gd1-bottom">
+
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+    </div>
+	<div class="col-md-4 climate-grids" style="background-color:orange;height:580px">
+<div class="climate-gd1-top">
+<h1>Fund Raising </h1>
+                <img src="{% static 'account/images/fund.png' %}" height="160" width="200" style="border-radius:8px">
+				<div class="col-md-6 climate-gd1top-right">
+				</div>
+
+				<div class="clearfix"> </div>
+			<p>A donor in general is a person, organization or government which donates something voluntarily. The term is usually used to represent a form of pure altruism, but is sometimes used when the payment for a service is recognized by all parties as representing less than the value of the donation and that the motivation is altruistic. In business law a donor is someone who is giving the gift (law), and a donee the person receiving the gift.
+
+More broadly
+            </div>
+
+
+	</div>
+
+	</div>
+
+
+
+    <div class="col-md-4 climate-grids1" style="background-color:#280E3B;color:white;height:580px">
+<div class="climate-gd1-top">
+<h1>Projects Aspire</h1>
+                <img src="{% static 'account/images/proj.jpg' %}" height="160" width="200" style="border-radius:8px">
+				<div class="col-md-6 climate-gd1top-right">
+				</div>
+
+				<div class="clearfix"> </div>
+			<p>Green mobility, sustainable cities, conscious consumption, digital refugee relief, innovative development cooperation – at RESET.org we give daily reports on smart solutions from around the world. We provide background knowledge on the most pressing problems of our time – and suggest ways that you can help.
+
+                That's why we've committed ourselves to the principles of constructive journalism and have taken it upon ourselves to use RESET.org to inspire positive change, take a critical look at current developments in the field  </p>
+            </div>
+
+
+	</div>
+
+	</div>
+	<div class="clearfix"> </div>
+</div>
+<!--climate end here-->
+</div>
+
+<!--inner block end here-->
+<!--copy rights start here-->
+
+
+<div class="copyrights">
+	 <p>© 2016 Venba. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">venbainfotech</a> </p>
+</div>
+<!--COPY rights end here-->
+</div>
+</div>
+
+<!--slider menu-->
+    <div class="sidebar-menu" style="background-color:#632A76;height:960px">
+
+		    <div class="menu">
+		      <ul id="menu" >
+
+                  <marquee direction="up" speed="normal" behavior="scroll" vsspace="100" height="700">
+               <center>   <h3 style="color:white;letter-spacing: 3px;"><font face="verdana"> Welcome</font></h3></center>
+   <center><h3 style="color:white;letter-spacing: 3px;"><font face="verdana"> Donors           </font></h3>
+   <i class="fa fa-thumbs-up" style="font-size:48px;color:black"></i>
+       <h3 style="color:white;letter-spacing: 3px;"><font face="verdana"> Login To Access</font></h3></br>
+       <h3 style="color:white">Current Projects</h3>
+        <img src="{% static 'account/images/prjdesp.jpg' %}" height="130" width="150" style="border-radius:50%">
+       <p>WHO progression</p>
+   </center>
+                  </marquee>
+		        		      </ul>
+		    </div>
+	 </div>
+	<div class="clearfix"> </div>
+</div>
+<!--slide bar menu end here-->
+<script>
+var toggle = true;
+
+$(".sidebar-icon").click(function() {
+  if (toggle)
+  {
+    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+    $("#menu span").css({"position":"absolute"});
+  }
+  else
+  {
+    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+    setTimeout(function() {
+      $("#menu span").css({"position":"relative"});
+    }, 400);
+  }
+                toggle = !toggle;
+            });
+</script>
+<!--scrolling js-->
+		<script src="{% static 'account/js/jquery.nicescroll.js' %}"></script>
+		<script src="{% static 'account/js/scripts.js' %}"></script>
+		<!--//scrolling js-->
+<script src="{% static 'js/bootstrap.js' %}"> </script>
+<!-- mother grid end here-->
+</body>
+</html>

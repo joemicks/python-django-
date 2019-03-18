@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<aside class="main-sidebar" style="background-color:#161B21">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar" style="background-color:#161B21">
+      <!-- Sidebar user panel -->
+
+      <!-- search form -->
+
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree"></br>
+            <a href="/tech/login/" class="btn btn-warning" style="background-color:#F4A950;width:230px"><b style="color:black">LOGIN </b>
+            </a>
+
+        <li class="header">Projects</li>
+
+
+
+<marquee direction="up" speed="fast" behavior="scroll" vsspace="150" height="700" >
+
+    <hr style="color:green">
+               <center>   <h3 style="color:#F4A950;letter-spacing: 3px;"><font face="verdana"> Welcome</font></h3></center>
+   <center><h3 style="color:#F4A950;;letter-spacing: 3px;"><font face="verdana"> Donors           </font></h3>
+   <img src="{% static 'account/images/loginlogo.png' %}" width="150px" height="150px">
+       <h3 style="color:#F4A950;;letter-spacing: 3px;"><font face="verdana"> Login To Donate</font></h3></br>
+       <hr size="20"><h3 style="color:#F4A950;">Current Projects</h3></hr>
+       <hr></hr>
+{% for sa in sample %}
+       <h3 style="color:dodgerblue">
+
+           {{ sa.title }}</h3></br>
+       <img src="{{ sa.image.url }}" width="100px" height="100px"></br></p>{% endfor %}
+   </center></div>
+                  </marquee>
+
+
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+</body>
+</html>
