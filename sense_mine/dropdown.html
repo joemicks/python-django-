@@ -1,0 +1,39 @@
+<form>
+Show form? 
+<input type="radio" id="showform" value="yes" name="showform" onchange="showhideForm(this.value);"/>Own Bussiness(Employer)
+<input type="radio" id="showform" value="no" name="showform" onchange="showhideForm(this.value);"/>Employee
+</form>
+
+<script type="text/javascript">
+function showhideForm(showform) {
+    if (showform == "yes") {
+        document.getElementById("div1").style.display = 'block';
+		 document.getElementById("div3").style.display = 'block';
+        document.getElementById("div2").style.display = 'none';
+    } 
+    if (showform == "no") {
+		 document.getElementById("div1").style.display = 'block';
+        document.getElementById("div2").style.display = 'block';
+		document.getElementById("div3").style.display = 'none';
+       
+    }
+}
+</script>
+
+<div id="div1" style="display:none">
+<label>Company Name</label></label><input type="text" class="form-control " name="t10" id="name"></br>
+<label>Pan Number</label></label><input type="text" class="form-control " name="t11" id="name"></br>
+</div>
+
+<div id="div2" style="display:none">
+ <label>Designation</label></label><input type="text" class="form-control " name="t13" id="gender">
+</div>
+
+<div id="div3" style="display:none">
+ <label>GST Number</label></label><input type="text" class="form-control " name="t13" id="gender">
+</div>
+
+
+
+ 
+                   

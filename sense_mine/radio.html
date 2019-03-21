@@ -1,0 +1,75 @@
+<html>
+
+<head>
+</head>
+<body onload = "hidefield(), hidefield2()">
+<form action = "test3.php" method = "post">
+Please enter a name for the App <input type = "text" name = "name">
+<table border = "1"><tr><th>Choose a Label</th><th>Choose an element</th></tr>
+<tr><td><input type = "text" name = "label1" /></td> <td> 
+<select name = "elementtype1" id="elementtype1" onchange="showfield(this.options[this.selectedIndex].value), showfield2(this.options[this.selectedIndex].value)">
+						    <option value = 'select'> Select     </option>
+  						    <option value='txtbox'>Text Box</option>
+  						    <option value='lstbox'>List Box</option>
+						    <option value='chkbox'>Check Box</option>
+  						    <option value='radio'>Radio Button</option>
+						    </select></td><td><div id="div1">Enter Listbox options: <input type="text" name="whatever1" /></div><div id="div2">Enter Checkbox options: <input type="text" name="whatever2" /></div></td></tr>
+</table>
+<input type = "submit" value = "Submit">
+</form>
+</body>
+</html>
+
+class UserProfileDetails(forms.Form):
+    donor=forms.CharField(max_length=100)
+    father = forms.CharField(max_length=100)
+    address =forms.CharField(max_length=200)
+    district = forms.CharField(widget=forms.Select(choices=CHOICES))
+    mobile = forms.IntegerField()
+    dob = forms.CharField(max_length=100)
+    aadhar = forms.CharField(max_length=10)
+    blood = forms.CharField(widget=forms.PasswordInput)
+    email = forms.CharField(widget=forms.Select(choices=CHOICES))
+    company = forms.CharField(max_length=10)
+    designation=forms.CharField(max_length=100)
+    pancard = forms.IntegerField()
+    gst =forms.IntegerField()
+
+class UserProfileModel(models.Model):
+    donor = forms.CharField(max_length=100)
+    father = forms.CharField(max_length=100)
+    address = forms.CharField(max_length=200)
+    district = forms.CharField(max_length=100)
+    mobile = forms.IntegerField()
+    dob = forms.CharField(max_length=100)
+    aadhar = forms.CharField(max_length=10)
+    blood = forms.CharField(widget=forms.PasswordInput)
+    email = forms.CharField(max_length=100)
+    company = forms.CharField(max_length=10)
+    designation = forms.CharField(max_length=100)
+    pancard = forms.IntegerField()
+    gst = forms.IntegerField()
+
+
+
+
+def saveuser(request):
+    donor = request.POST['t1']
+    father = request.POST['t2']
+    mobile = request.POST['t3']
+    dob = request.POST['t4']
+    address = request.POST['t5']
+    district = request.POST['t6']
+    aadhar = request.POST['t7']
+    blood = request.POST['t8']
+    email = request.POST['t9']
+    company = request.POST['t10']
+    pancard = request.POST['t11']
+    gst= request.POST['t12']
+    designation = request.POST['t13']
+    file = UserProfile(donor=donor,father=father,mobile=mobile,dob=dob,address=address,district=district,aadhar=aadhar,blood=blood,email=email,company=company,pancard=pancard,gst=gst,designation=designation)
+    file.save()
+    return redirect('login_redirect')
+
+
+

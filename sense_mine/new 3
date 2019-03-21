@@ -1,0 +1,6 @@
+  a = dontation_portal.objects.raw("SELECT project.id,donation.foreign_donation_id,tech_registrationdatas.username,donation.value_id,donation.fund_amount, project.money FROM tech_project_employee as project LEFT join tech_registrationdatas on donation.value_id = tech_registrationdatas.id INNER JOIN tech_dontation_portal as donation ON project.id="+pk+" and donation.foreign_donation_id="+pk+"");  <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fa fa-download"></i> Generate PDF
+          </button>
+		  
+		  
+		  select donation.fund_amount from tech_project_employee  as project,tech_dontation_portal as donation where project.id = 1 and donation.value_id =56
